@@ -81,6 +81,7 @@ After completing the "wizard", a standard file with the basic parameters appears
 
 ## Hardware connection GGreg20_V3 and controller
 In steps 5 and 6, we give an example of a connection for ESP8266. For the ESP32 controller, everything is the same. The only difference is the number, purpose and numbering of ESP32's GPIOs as a more powerful hardware platform. But the general logic is identical.
+![GGreg20_V3 wired connection](https://github.com/iotdevicesdev/ggreg20-v3-homeassistant-esphome-example/blob/main/ESPHome_GGreg20_V3_and_NodeMCU_ESP8266_wired_connection.jpg)
 
 ### Step 5. Select the GPIO pin on the controller that will register the pulses from GGreg20
 If this is your first time dealing with ESP8266 platform and you do not know which GPIO is best to use for a pulse counter, we recommend using the GPIO Planning and Application Standard for ESP8266-12 / NodeMCU / Lua projects developed by alterstrategy.lab. https://alterstrategy.com/recommended-pin-use-standard/
@@ -112,7 +113,7 @@ There are two ways to verify that the corresponding GGreg20 entities are registe
 ## Visualization
 ### Step 10. Add GGreg20 radiation sensor widgets to the Dashboard
 Here is an example of a demo tab from an active server for two devices GGreg20_V1 and GGreg20_V3 located in different coordinate axes. Each device uses the same yaml file as we created above.
-
+![GGreg20_V3 Dashboard widgets example](https://github.com/iotdevicesdev/ggreg20-v3-homeassistant-esphome-example/blob/main/HA_Rad-Dashboard_Both-GGreg2-GGreg3_dark_2021-04-29_132657.jpg)
 # Buy PS4IoT_V1 Smart Power Supply Unit Module
 On Tindie: https://www.tindie.com/products/iotdev/ggreg20_v3-ionizing-radiation-detector/
 
