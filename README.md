@@ -121,3 +121,5 @@ IoT-devices Online Shop: https://iot-devices.com.ua/en/
 
 # Watch demo video
 - coming soon
+
+IoT-devices YouTube Channel: https://www.youtube.com/channel/UCHpPOVVlbbdtYtvLUDt1NZw/videos
