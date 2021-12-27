@@ -23,7 +23,7 @@ To calculate the value of the ionizing radiation power of microsieverts per hour
 https://esphome.io/components/sensor/pulse_counter.html
 
 This part of the yaml code is responsible for that:
-```
+```yaml
 sensor:
 - platform: pulse_counter
   pin: D3
@@ -46,7 +46,7 @@ To calculate the total radiation dose received in microsieverts, the Integration
 https://esphome.io/components/sensor/integration.htm
 
 This part of the yaml code is responsible for that:
-```
+```yaml
 sensor:
 - platform: integration
   name: "Total Ionizing Radiation Doze"
@@ -62,7 +62,7 @@ Also, in order to be able to test the pulse counter without the GGreg20 sensor, 
 https://esphome.io/components/binary_sensor/gpio.html
 
 This part of the yaml code is responsible for that:
-```
+```yaml
 binary_sensor:
   - platform: gpio
     name: "D3 Input Button"
