@@ -27,7 +27,7 @@ Vendor site: https://allmylinks.com/iot-devices
 
 ![GGreg20_V3 wired connection](https://github.com/iotdevicesdev/ggreg20-v3-homeassistant-esphome-example/blob/main/ESPHome_GGreg20_V3_and_NodeMCU_ESP8266_wired_connection.jpg)
 
-### Powering from a 2.4V input source
+## Powering from a 2.4V input source
 
 If you want to power the GGreg20_V3 from a 2.4 volt source, you need to short the Schottky diode shown in the photo with a wire or replace it with a 0 ohm resistor. Note, however, that such a correction will disable the module's reverse polarity protection:
 ![GGreg20_V3 reverse polarity prptection diode](https://github.com/iotdevicesdev/ggreg20-v3-homeassistant-esphome-example/blob/main/GGreg20_V3-reverse-polarity-protection-diode-manual-replacement-example.jpg)
