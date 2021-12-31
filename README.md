@@ -3,6 +3,12 @@ IoT-devices GGreg20_V3 Ionizing Radiation Detector module under Home Assistant s
 
 Hackaday Project Page: https://hackaday.io/project/183103-ggreg20v3-ionizing-radiation-detector
 
+ESPHome-Devices Project Page: https://www.esphome-devices.com/devices/IoT-devices-GGreg20-V3/
+
+# Documentation
+- Product description https://iot-devices.com.ua/en/product/ggreg20_v3-ionizing-radiation-detector-with-geiger-tube-sbm-20/
+- Datasheet https://iot-devices.com.ua/wp-content/uploads/2021/11/ggreg20_v3-datasheet-eng.pdf
+
 # Install
 ## The Server
 ### Step 1. Install (or start) the Home Assistant server
