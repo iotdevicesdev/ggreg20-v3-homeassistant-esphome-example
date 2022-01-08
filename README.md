@@ -123,7 +123,7 @@ Here is an example of a demo tab from an active server for two devices GGreg20_V
 # Buy GGreg_V3 Ionizing Radiation Detector Module
 On Tindie: https://www.tindie.com/products/iotdev/ggreg20_v3-ionizing-radiation-detector/
 
-IoT-devices Online Shop: https://iot-devices.com.ua/en/
+IoT-devices Online Shop: https://iot-devices.com.ua/en/product/ggreg20_v3-ionizing-radiation-detector-with-geiger-tube-sbm-20/
 
 # Watch demo video
 - coming soon
