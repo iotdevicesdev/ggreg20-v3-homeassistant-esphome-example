@@ -120,7 +120,7 @@ There are two ways to verify that the corresponding GGreg20 entities are registe
 ### Step 10. Add GGreg20 radiation sensor widgets to the Dashboard
 Here is an example of a demo tab from an active server for two devices GGreg20_V1 and GGreg20_V3 located in different coordinate axes. Each device uses the same yaml file as we created above.
 ![GGreg20_V3 Dashboard widgets example](https://github.com/iotdevicesdev/ggreg20-v3-homeassistant-esphome-example/blob/main/HA_Rad-Dashboard_Both-GGreg2-GGreg3_dark_2021-04-29_132657.jpg)
-# Buy PS4IoT_V1 Smart Power Supply Unit Module
+# Buy GGreg_V3 Ionizing Radiation Detector Module
 On Tindie: https://www.tindie.com/products/iotdev/ggreg20_v3-ionizing-radiation-detector/
 
 IoT-devices Online Shop: https://iot-devices.com.ua/en/
