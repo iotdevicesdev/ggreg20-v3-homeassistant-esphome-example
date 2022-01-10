@@ -5,6 +5,11 @@ Hackaday Project Page: https://hackaday.io/project/183103-ggreg20v3-ionizing-rad
 
 ESPHome-Devices Project Page: https://www.esphome-devices.com/devices/IoT-devices-GGreg20-V3/
 
+# ESPHome and Home Assistant Compatibility
+This hardware device is designed to be compatible with as many common software platforms and hardware systems as possible. GGreg20_V3 is compatible with any of the following systems: Arduino, ESP8266, ESP32, STM32, Raspberry Pi, ESPHome, Home Assistant, Tasmota, MicroPython, NodeMCU, Node-RED and many others. All you need to connect the GGreg20_V3 is a system with a pulse counter on the GPIO and a timer to measure time.
+
+<img src="https://github.com/iotdevicesdev/ggreg20-v3-homeassistant-esphome-example/blob/main/made-for-esphome-black-on-white.png" width="250">
+
 # Documentation
 - Product description https://iot-devices.com.ua/en/product/ggreg20_v3-ionizing-radiation-detector-with-geiger-tube-sbm-20/
 - Datasheet https://iot-devices.com.ua/wp-content/uploads/2021/11/ggreg20_v3-datasheet-eng.pdf
