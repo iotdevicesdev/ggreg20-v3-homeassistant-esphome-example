@@ -34,7 +34,7 @@ binary_sensor:
       inverted: True
       mode: INPUT_PULLUP
 
-# Here we calc and include to the firmware a power and doze values of ionizing radiation as sensor outputs
+# Here we calc and include to the firmware a power and dose values of ionizing radiation as sensor outputs
 sensor:
     
 - platform: pulse_counter
@@ -46,7 +46,7 @@ sensor:
     falling_edge: INCREMENT
   update_interval: 60s
   accuracy_decimals: 3
-  id: my_doze_meter
+  id: my_dose_meter
   filters:
     - sliding_window_moving_average: # 5-minutes moving average (MA5) here
         window_size: 5
@@ -54,11 +54,13 @@ sensor:
     - multiply: 0.0054 # SBM20 tube conversion factor of pulses into mkSv/Hour 
 
 - platform: integration
-  name: "Total Ionizing Radiation Doze"
+  name: "Total Ionizing Radiation Dose"
   unit_of_measurement: "mkSv"
-  sensor: my_doze_meter # link entity id to the pulse_counter values above
+  sensor: my_dose_meter # link entity id to the pulse_counter values above
   icon: "mdi:radioactive"
   accuracy_decimals: 5
   time_unit: min # integrate values every next minute
   filters:
-    - multiply: 0.00009 # obtained doze (from mkSv/hour into mkSv/minute) conversion factor: 0.0054 / 60 minutes = 0.00009; so pulses * 0.00009 = doze every next minute, mkSv.
+    # obtained dose. Converting from mkSv/hour into mkSv/minute: [mkSv/h / 60] OR [mkSv/h * 0.0166666667]. 
+    # if my_dose_meter in CPM, then [0.0054 / 60 minutes] = 0.00009; so CPM * 0.00009 = dose every next minute, mkSv.
+    - multiply: 0.0166666667
