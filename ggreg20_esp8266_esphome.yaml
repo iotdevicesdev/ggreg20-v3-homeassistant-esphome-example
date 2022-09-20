@@ -51,7 +51,7 @@ sensor:
     - sliding_window_moving_average: # 5-minutes moving average (MA5) here
         window_size: 5
         send_every: 5      
-    - multiply: 0.0054 # SBM20 tube conversion factor of pulses into mkSv/Hour 
+    - multiply: 0.0057 # SBM20 tube conversion factor of pulses into mkSv/Hour 
 
 - platform: integration
   name: "Total Ionizing Radiation Dose"
