@@ -135,6 +135,10 @@ On Tindie: https://www.tindie.com/products/iotdev/ggreg20_v3-ionizing-radiation-
 IoT-devices Online Shop: https://iot-devices.com.ua/en/product/ggreg20_v3-ionizing-radiation-detector-with-geiger-tube-sbm-20/
 
 # Watch demo video
-- coming soon
 
-IoT-devices YouTube Channel: https://www.youtube.com/channel/UCHpPOVVlbbdtYtvLUDt1NZw/videos
+<a href="https://www.youtube.com/watch?feature=player_embedded&v=lGIwdO35k1w" target="_blank">
+ <img src="https://img.youtube.com/vi/lGIwdO35k1w/mqdefault.jpg" alt="Watch the video" border="10" />
+</a><br>
+
+IoT-devices YouTube Channel: 
+https://www.youtube.com/channel/UCHpPOVVlbbdtYtvLUDt1NZw/videos
