@@ -1,45 +1,52 @@
 esphome:
-  name: esphome_node1 # Controller Unique Name
-  platform: ESP8266 # Platform type you have to select when creating new yaml-config in ESP Home
+  name: ggreg20_v3-esp8266-node
+  friendly_name: ggreg20_v3-esp8266-node
+
+esp8266:
   board: nodemcuv2 # Controller type you have to select when creating new yaml-config in ESP Home
-
-wifi:
-  ssid: "YourWiFiSSID"
-  password: "SSIDPassword"
-
-  # Enable fallback hotspot (captive portal) in case wifi connection fails
-  ap:
-    ssid: "Esphome Node1 Fallback Hotspot"
-    password: "Cpxg9hRIBU7M"
-
-captive_portal:
 
 # Enable logging
 logger:
 
 # Enable Home Assistant API
 api:
-  password: "APIpassword"
+  encryption:
+    key: "HMgus3nbB5gFF2Op0zPLkOKQYyCHCH+BPznNbFYp"
 
 ota:
-  password: "OTApassword"
+  password: "18a3b12208a44d6ec4ec9c6fa3ca"
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Test-Node2 Fallback Hotspot"
+    password: "hkY9aXnG"
+
+captive_portal:
 
 # Just embedded test D3 (GPIO0) button on every ESP8266 Devboard
-# You can press D3 button several times to simulate incoming GGreg pulses
+# You can press D3 button several times to simulate incoming GGreg20 sensor pulses
 binary_sensor:
   - platform: gpio
     name: "D3 Input Button"
     pin:
-      number: 0
+      number: D3
       inverted: True
       mode: INPUT_PULLUP
+      allow_other_uses: True
 
 # Here we calc and include to the firmware a power and dose values of ionizing radiation as sensor outputs
 sensor:
     
 - platform: pulse_counter
-  pin: D3
-  unit_of_measurement: 'mkSv/Hour'
+  pin: 
+    number: D3
+    inverted: True
+    allow_other_uses: True
+  unit_of_measurement: 'uSv/Hour'
   name: 'Ionizing Radiation Power'
   count_mode: 
     rising_edge: DISABLE
@@ -51,18 +58,18 @@ sensor:
     - sliding_window_moving_average: # 5-minutes moving average (MA5) here
         window_size: 5
         send_every: 5      
-    - multiply: 0.0057 # SBM20 tube conversion factor of pulses into mkSv/Hour 
+    - multiply: 0.0057 # SBM20 tube conversion factor of pulses into uSv/Hour OR use 0.00332 for the J305 GM-tube 
 
 - platform: integration
   name: "Total Ionizing Radiation Dose"
-  unit_of_measurement: "mkSv"
+  unit_of_measurement: "uSv"
   sensor: my_dose_meter # link entity id to the pulse_counter values above
   icon: "mdi:radioactive"
   accuracy_decimals: 5
   time_unit: min # integrate values every next minute
   filters:
-    # obtained dose. Converting from mkSv/hour into mkSv/minute: [mkSv/h / 60] OR [mkSv/h * 0.0166666667]. 
-    # if my_dose_meter in CPM, then [0.0054 / 60 minutes] = 0.00009; so CPM * 0.00009 = dose every next minute, mkSv.
+    # obtained dose. Converting from uSv/hour into uSv/minute: [uSv/h / 60] OR [uSv/h * 0.0166666667]. 
+    # if my_dose_meter in CPM, then [0.0057 / 60 minutes] = 0.000095; so CPM * 0.000095 = dose every next minute, uSv.
     - multiply: 0.0166666667
 
 # License record: IoT-devices, LLC : EO/zaD7NcdSfHLgB/OlzLx/6De/N5thMJ1PCZSsxhxqd3J4OoHK84QQgNlKVSh5X1lrEp0a0/8fRyTThM649FZNcQPydSrHadjHNH3pMPb6q4sDRHzsmt4vE18M3cfG+Rd7cMNqqlTl2IUu5J7mLiclji8di0FSBIB7UOnf14JxJ71oruGPkEiqK9yLAw4or
